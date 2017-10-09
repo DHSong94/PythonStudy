@@ -1,4 +1,5 @@
-# MaxMember - n값 변경하면서
+# sigma(N) - n이 11부터 N일 때까지의 계산식의 합을 구해주는 함수
+# MaxMember() - 최대 가입자 수(M) 구해주는 함수
 
 import math
 
@@ -25,8 +26,8 @@ def MaxMember():  # 최대 가입자 수(M) 구하기
 
         if(M < 0.01): # M값이 0.01보다 작으면 N값 증가시켜서 MaxMember(N) 다시 실행
             N+=1
-        else:
+        else: # M값이 0.01보다 커지면 최대 가입자 수 출력 후 함수 종료
+            print("N이 %d일 때 M값이 %0.12lf이므로 최대 가입자 수는 %d명입니다." % (N, M, N - 1))
             break
 
 MaxMember()
-#print("N이 %d일 때 M값이 %0.10lf이므로 최대 가입자수는 %d명입니다." %(N, M, N-1))
